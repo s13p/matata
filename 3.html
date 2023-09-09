@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 3</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        height: 100vh;
+        width: 93vw;
+        margin-top: -2rem;
+
+    }
+
+    .div1 {
+        grid-area: 3 / 6 / 13 / 13;
+    }
+
+    .div2 {
+        grid-area: 3 / 1 / 5 / 6;
+    }
+
+    .div3 {
+        grid-area: 5 / 1 / 8 / 3;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 40px;
+    }
+
+    .div4 {
+        grid-area: 5 / 4 / 8 / 6;
+        text-align: center;
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 40px
+    }
+
+    .div5 {
+        grid-area: 8 / 1 / 11 / 6;
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        font-size: 30px
+    }
+
+    .div6 {
+        grid-area: 11 / 2 / 12 / 5;
+    }
+
+    .div7 {
+        grid-area: 3 / 6 / 5 / 13;
+        display: flex;
+    }
+
+    .div8 {
+        grid-area: 5 / 6 / 6 / 9;
+        display: block;
+    }
+
+    .div9 {
+        grid-area: 5 / 10 / 6 / 13;
+        display: block;
+    }
+
+    .div10 {
+        grid-area: 7 / 6 / 9 / 9;
+        display: block;
+    }
+
+    .div11 {
+        grid-area: 7 / 10 / 9 / 13;
+    }
+
+    .div12 {
+        grid-area: 9 / 6 / 11 / 13;
+    }
+
+    .div13 {
+        grid-area: 11 / 7 / 13 / 12;
+               margin: auto;
+    }
+</style>
+<style>
+    .pupu {
+        margin-top: 3rem !important;
+        border-top: orange dashed 2px;
+        padding-top: 1rem;
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .left-btn {
+        height: 150px;
+        width: 600px;
+        font-weight: 700;
+        border-radius: 0px;
+        padding: 0;
+        margin: 0;
+        color: white;
+        font-size: 50px;
+        border-radius: 13px;
+        background-color: orange;
+        border: none;
+        transition: all ease .1s;
+    }
+
+    .left-btn:hover {
+        background-color: black;
+        color: orange;
+        transform: scale(1.02);
+        font-size: 50px;
+        border-radius: 8px;
+        font-weight: 700;
+    }
+
+    a {
+        padding: 0;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 15px !important;
+
+    }
+
+    .apoko {
+        font-size: 45px !important;
+        font-weight: 600 !important;
+    }
+
+    .picha {
+        height: 120px;
+        width: auto;
+    }
+
+    .qq {
+        padding: 0 15px;
+        font-size: 24px;
+        color: aliceblue;
+        transition: all ease .3s;
+    }
+
+    .qq:hover {
+        color: orange;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .matwana {
+        width: 150px;
+        height: 50px;
+
+
+    }
+
+    .flat {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+        background-color: #3d3d3d;
+        border-radius: 13px;
+    }
+
+    .matwana1 {
+        width: 70%;
+        min-width: 100%;
+        height: 50px;
+        display: flex;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+        align-items: center;
+        border: rgba(255, 166, 0, 0) solid 1px;
+        border-radius: 17px;
+        margin-top: 2rem;
+        background-color: #3d3d3d;
+        color: white;
+
+    }
+
+    .aa {
+        width: 150px;
+        padding: 0 2PX;
+        font-size: 29PX;
+        height: 100%;
+        line-height: 150%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        color: rgb(255, 255, 255);
+        background-image: url("./Untitled.webp");
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: 10%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .toto {
+
+        width: auto;
+        max-width: 300px;
+        line-height: 100%;
+
+        z-index: 88;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+        align-items: center;
+        font-size: 20px;
+
+    }
+
+    .matwana12 {
+        width: 220px;
+        text-align: center;
+        height: 60px;
+
+        border-radius: 50px;
+        font-size: 28px;
+        border: none;
+        margin-right: -2vw;
+        background-color: orange;
+        font-weight: 700;
+        padding: 1rem 2rem;
+        line-height: 10%;
+        transition: all ease .2s;
+    }
+
+    .matwana12:hover {
+        background-color: rgb(255, 237, 203);
+        color: orange;
+        transform: scale(1.06);
+    }
+
+    .matwana23 {
+
+        width: 220px;
+        height: 60px;
+        border-radius: 50px;
+        font-size: 28px;
+
+        border: none;
+        color: orange;
+        background-color: rgb(0, 0, 0);
+        font-weight: 700;
+        padding: 1rem 2rem;
+        line-height: 10%;
+        transition: all ease .3s;
+    }
+
+    .matwana23:hover {
+        background-color: rgb(255, 237, 203);
+        color: black;
+        transform: scale(1.06);
+    }
+    .nav-container .logowrap {
+        width: 100%;
+        display: flex;
+        top: 0;
+        position: absolute;
+        flex-direction: row;
+
+        justify-content: space-around;
+        
+    }
+    .nav-container.itemsy {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;       position: absolute; top: 0;
+    }
+    a {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        transition: all .2s ease;
+        font-weight: 300 !important;
+
+    }
+    a:hover {
+        color: orange;
+        font-weight: 600;
+    }
+    @media screen and (max-width: 768px) {
+        .parent {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            grid-row-gap: 20px;
+            padding: 10px;
+        }
+
+        .div1 { grid-area: auto; text-align: center; }
+        .div2 { grid-area: auto; }
+        .div3 { grid-area: auto; text-align: center; }
+        .div4 { grid-area: auto; text-align: center; }
+        .div5 { grid-area: auto; text-align: center; }
+        .div6 { grid-area: auto; text-align: center; }
+        .div7 { grid-area: auto; text-align: center; }
+        .div8 { grid-area: auto; text-align: center; }
+        .div9 { grid-area: auto; text-align: center; }
+        .div10 { grid-area: auto; text-align: center; }
+        .div11 { grid-area: auto; text-align: center; }
+        .div12 { grid-area: auto; text-align: center; }
+    }
+</style>
+
+<body>
+    <div class="nav-container">
+        <div class="logowrap">
+            <img height="200px" src="./logo.png" alt="logo">
+            <div style="width: 30vw;"></div>
+            <a href="index.html">
+                <h1>PAGE 1</h1>
+            </a>
+            <a href="2.html">
+                <h1>PAGE 2</h1>
+            </a>
+            <a href="3.html">
+                <h1>PAGE 3</h1>
+            </a>
+    
+        </div>
+    
+    </div>
+    <div class="parent">
+
+        <div class="div1"  > </div>
+        <div class="div2" style="margin-top: 15vh !important;">
+            <h1 style="text-align: center; font-size: 45px; padding: 10px  0 0 40px ; color: orange !important;margin-bottom: -7vh !important;">THANK YOU FOR CHOOSING CYCLONE !
+            </h1>
+        </div>
+        <div class="div3" style="text-align: center;margin-top: 10vh !important">
+            <p style="font-size: 30px !important;">LOW FEES</p>
+            <p style="font-size: 30px !important;">NO SIGNUP</p>
+            <p style="font-size: 30px !important;">ANONYMOUS</p>
+        </div>
+        <div class="div4" style="margin-top: 10vh !important;">
+            <p style=" text-align: center; font-size: 30px !important;">SECURE</p>
+            <p style="font-size: 30px !important;">MULTI-SEND</p>
+            <p style="font-size: 30px !important;">WALLET CONNECT</p>
+        </div>
+        <div class="div5">
+            <P style="padding: 0 100px; margin-top: -5vh; font-size: 29px !important ; ">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Omnis natus, libero cupiditate hic doloremque ipsa modi deleniti inventore sit, eaque
+                officia nostrum esse obcaecati illo alias impedit, sed exercitationem laborum?</P>
+        </div>
+        <div class="div6"> </div>
+        <div class="div7" style="margin-top: 3vw;">
+            <div style="margin-top: -2vh;">
+                <h1 style="font-size: 45px; color: orange; ">NON TRACEABLE SWAP</h1>
+            </div>
+            <div style="display: block;">
+
+
+
+                <div style="display: flex; margin-left: 10%; padding-left: ; width: fit-content;"> <button
+                        class="matwana12">
+                        <p style="font-size: 34px; margin-bottom: 110px;">SINGLE</p>
+                    </button> <button class="matwana23">
+                        <p style="font-size: 34px;">MULTI SEND</p>
+                    </button> </div>
+
+
+                <p></p>
+
+                <p style=" margin-left: 30%;width: 100%; font-size: 27px ;">ANONIMITY LEVEL: HIGH</p>
+            </div>
+        </div>
+        <div class="div10">
+            <div>
+                <H1>SEND:</H1>
+            </div>
+            <div class="matwana1" style="font-size: 50px; color: orange; " >0.00  <span style="width: 50px;" ></span> ETH </div>
+        </div>
+        <div class="div9">
+            <div>
+                <H1></H1>
+            </div>
+            <div class="matwana1"></div>
+        </div>
+        <div class="div8 matwana1 "> </div>
+        <div class="div11">
+            <div></div>
+            <H1>RECEIVE:</H1>
+            <div class="matwana1" style="font-size: 50px; color: orange; " >0.00  <span style="width: 50px;" ></span> ETH </div>
+        </div>
+        <div class="div12">
+            <div></div>
+            <H1>RECEIVING ADDRESS:</H1>
+            <div class="matwana1"> <h1 style="color: ORANGE; font-size: 50px; font-weight: 300;" >0X000000000000000000</h1> </div>
+        </div>
+        <div class="div13"> 
+            <p style="font-size: 21px !important; text-align: center;" >I agree to the termsI agree to the termsI agree to the termsI agree to the termsI agree to the terms</p>
+            <button class="left-btn" style="width: 100% !important;" >SWAP NOW</button> </div>
+    </div>
+</body>
+
+</html>
